@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Order</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+<noscript>
+	<div style="position:fixed;top:0px;left:0px;width:100%;z-index:10000;background:red;color:white;text-align:center;">
+		This site works best with <a style="color:white;" href="http://www.enable-javascript.com/" target="_blanc">JavaScript enabled</a>
+	</div>
+</noscript>
+
+ <div id="header"></div>
+ <div id="main">
+ <br>&nbsp;<br>&nbsp;<br>
+
+ <form action="/checkout" method="POST">
+  <input type="hidden" name="amount" value="<%amount%>">
+  <input type="hidden" name="currency" value="<%cur%>">
+  <input type="hidden" name="name" value="<%name%>">
+  <input type="hidden" name="desc" value="<%desc%>">
+  <script
+     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+     data-key="<%key%>"
+     data-amount="<%amount%>"
+     data-name="tondy.com"
+     data-description="<%desc%>"
+     data-image="https://tondy67.github.io/img/abvos.png"
+     data-locale="auto"
+     data-currency="<%cur%>"
+     data-zip-code="true">
+  </script>
+ </form>
+
+ </div>
+
+ <div  ><!-- id="footer" -->
+  &nbsp;<a href="/" >home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/abv" >chat</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/tos.html" >Terms of Service</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/contact.html">Contact</a>&nbsp;&nbsp;
+ </div>
+
+</body>
+</html>

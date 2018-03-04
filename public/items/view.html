@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="style.css" rel="stylesheet" type="text/css" media="all">
+ <script src="afs.js" ></script>
+ <title>afs</title>
+</head>
+<body>
+ <p><a href="view.html"><img src="abvos.60.png" width="30" alt="abvos" /></a></p>
+ <div class="clearfix" id="afs">
+  <a class="item" href="Donation 1/view.html"><img src="Donation 1/logo.png" width="80" alt="logo.png" title="1" onerror="this.src='no.png'"/></a>
+  <a class="item" href="Donation 5/view.html"><img src="Donation 5/logo.png" width="80" alt="logo.png" title="1" onerror="this.src='no.png'"/></a>
+  <a class="item" href="Donation 10/view.html"><img src="Donation 10/logo.png" width="80" alt="logo.png" title="1" onerror="this.src='no.png'"/></a>
+  <a class="item" href="Donation 100/view.html"><img src="Donation 100/logo.png" width="80" alt="logo.png" title="1" onerror="this.src='no.png'"/></a>
+  <a class="item" href="Donation 10x/view.html"><img src="Donation 10x/logo.png" width="80" alt="logo.png" title="1" onerror="this.src='no.png'"/></a>
+ </div>
+ 
+ <script>
+  const box = document.querySelector('#afs'); 
+  let m = null, s = '';
+  try{ m = JSON.parse(meta); }catch(e){}
+  if (m !== null){
+	  for(let f of m.files){
+		  if (!f) continue;
+		s += '<div class="item"><a href="'+f.name+'/view.html"><img src="'+f.name+'/logo.png" width="80" alt="logo.png" title="'+f.name+'" onerror="this.src=\'no.png\'"/><br>'+f.name+'</a></div>';
+//		 console.log();
+	  }
+   
+   box.innerHTML = s;
+  }
+ </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Order</title>
+ <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+ <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+</head>
+<body>
+ <noscript>
+  <h3 style="background:red;color:white;text-align:center;">
+	This site works best with <a style="color:white;" href="http://www.enable-javascript.com/" target="_blanc">JavaScript enabled</a>
+  </h3>
+ </noscript>
+
+ <div id="header">The Art of Infinity</div>
+ <div id="main">
+ <br>&nbsp;<br>&nbsp;<br>
+ <form action="/order" method="post">
+  Please, enter the amount and click <b>Next</b><br><br>
+  Amount:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="amount" value="1"> 
+  <select name="currency" >
+   <option value="eur">EUR</option>
+   <option value="usd">USD</option>
+   <option value="gbp">GBP</option>
+   <option value="cad">CAD</option>
+   <option value="aud">AUD</option>
+  </select><br><br>
+  Product:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="desc" value="Translation EN/ES"> <br><br>
+  Your name:&nbsp;<input type="text" name="name" value=""> <br><br>
+  <input type="submit" value="Next">
+<!--  <div class="g-recaptcha" data-sitekey="6LePCUcUAAAAAC8fUiBQxaJA2DG1zCO8AjBbwJE0"></div>  -->
+</form>
+
+ </div>
+
+ <div  ><!-- id="footer" -->
+  &nbsp;<a href="/" >home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/abv" >chat</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/tos.html" >Terms of Service</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/contact.html">Contact</a>&nbsp;&nbsp;
+ </div>
+
+</body>
+</html>

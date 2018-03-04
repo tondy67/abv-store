@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <link rel="icon" type="image/png" href="/favicon.png" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Apps marketplace</title>
+ <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+ <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+</head>
+
+<body>
+ <noscript>
+  <h3 style="background:red;color:white;text-align:center;">
+	This site works best with <a style="color:white;" href="http://www.enable-javascript.com/" target="_blanc">JavaScript enabled</a>
+  </h3>
+ </noscript>
+
+ <div id="header"><%store%></div>
+ <div id="main">
+  <br>&nbsp;<br>
+  <p><a href="/store">Back</a></p>
+<div class="clearfix">
+  <div class="item shadow">
+   <img src="<%logo%>" width="150" height="150" />
+   <p class="stats">$<%price%></p> 
+   <h3 class="name"><%name%></h3>
+   <p class="desc"><%desc%></p>
+ <form action="/checkout" method="POST">
+  <input type="hidden" name="amount" value="<%amount%>">
+  <input type="hidden" name="currency" value="<%cur%>">
+  <input type="hidden" name="name" value="<%name%>">
+  <input type="hidden" name="desc" value="<%name%>">
+  <script
+     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+     data-key="<%key%>"
+     data-amount="<%amount%>"
+     data-name="tondy.com"
+     data-description="<%name%>"
+     data-image="https://tondy67.github.io/img/abvos.png"
+     data-locale="auto"
+     data-currency="<%cur%>"
+     data-zip-code="true">
+  </script>
+ </form>
+  </div>
+</div>
+
+  <h2 class="uppercase">SHARE</h2>
+  <div class="clearfix">
+   <div class="icon"><i class="fab fa-twitter"></i></div>
+   <div class="icon"><i class="fab fa-facebook"></i></div>
+   <div class="icon"><i class="fab fa-github"></i></div>
+   <br>&nbsp;<br>&nbsp;
+  </div>
+ </div>
+
+ <div  ><!-- id="footer" -->
+  &nbsp;<a href="/" >home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/abv" >chat</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/tos.html" >Terms of Service</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="/contact.html">Contact</a>&nbsp;&nbsp;
+ </div>
+
+</body>
+</html>
